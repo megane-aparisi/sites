@@ -1,0 +1,114 @@
+/*Police de texte*****************************************************************************/
+@font-face {
+    font-family: "Blacksword";
+    src: url(../fonts/Blacksword.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-italic.woff) format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Décoration de texte*************************************************************************/
+
+.italique {
+  font-style: italic;
+}
+
+.rose {
+  color: #FFACC8;
+}
+
+.gras {
+  font-weight: bold;
+}
+
+.hyphens {
+-webkit-hyphens: auto;
+-ms-hyphens: auto;
+hyphens: auto;
+}
+
+/*Format de texte****************************************************************************/
+
+html {
+  scroll-behavior: smooth;
+  color: grey;
+}
+
+body {
+  width:50%;
+  min-width: 800px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Cardo;
+  font-size: 1.4em;
+  text-indent : 1.11em;
+  line-height : 2.23em;
+  background-image: url(../img/bunting.png);
+  background-repeat:repeat-x;
+}
+
+h1, h2, h3 {
+  font-family: Blacksword;
+  font-weight: normal;
+}
+
+h1 {
+  font-size:4em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size:2.5em;
+  word-spacing : 1.12em;
+  margin: 0;
+  margin-bottom: -0.3em;
+  margin-top: 0.8em;
+}
+
+h3 {
+  font-size:1.5em;
+  word-spacing : 0.45em;
+  margin: 0;
+  margin-bottom: -0.9em;
+}
+
+blockquote {
+  text-align: center;
+  style: cardo-italic;
+  font-size: 1.5em;
+}
+
+blockquote cite {
+      font-size: 0.7em;
+      display: block;
+      text-align:right;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  line-height : normal;
+}
+
+img {
+  text-align: center;
+}

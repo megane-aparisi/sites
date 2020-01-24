@@ -1,0 +1,55 @@
+ctrl + alt + t = le terminal s'affiche 
+
+pwd = print working directory - taper cette commande permet de nous retrouver
+
+ls = list 
+
+ls -al = utilisateur/groupe/taille de ficher/date 
+cd sites = ("sites" est mon nom de fichier)
+
+mkdir + nomquejeveux = make directory, me créer un fichier
+
+cd .. = les deux points font un retour
+
+touch = créer un fichier 
+
+Déclarer mon JS source
+
+<script src="indec.js"></script>
+
+
+git init = rajouter un new repository 
+git -h = verifier que j'ai le logiciel
+git add. = ajoute tout mes dossier dans le repository
+
+	
+
+------------------------------------
+
+/* Notes de rappel : */
+var nombretest = 1;
+let nombre2 = 2; /*La var va changer. la var est accessible uniquement à la ligne déclarée*/
+const nombres = 3; /*la var est constante*/
+document.write(nombretest); /*ca sert à écrire dans le html*/
+nombretest = "nombre";
+document.write("<br>");
+document.write(nombretest);
+
+
+---------------------------------------
+Les opérateurs
++
+-
+*
+/
+
+% = le modulo est égale au reste de ma division
+----------------------------------------
+Les tableaux :
+
+Dans les tableaux on peut stocker nombre et string.
+
+let array = ["toto", 10, "tata"] (chaque valeur de ce tableau (toto, 10 , tata) est associé à un index(0.1.2.3....))
+
+document.write array [0] (va m'afficher toto)
+ 

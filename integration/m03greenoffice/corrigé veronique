@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="utf-8" />
+  <title>Module 3 - Green Office</title>
+  <meta name="description" content="Structure sémantique du document, initiation à la propriété CSS Float, flux et comportement des balises">
+	<!-- Police de google font : contient @font-face faisant appel au fichier de polices : les requêtes se font sur le serveur de google -->
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<!-- on appelle toujours son CSS en dernier -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<!--HEADER -> joue le rôle de bannière du site car directement dans le body - Se répète sur toutes les pages -->
+	<header>
+    <!-- Lien sur le logo permettant de recharger la page d'accueil : ici, on cible le doisser courant (URL relative) -->
+		<a href="./"><img src="img/logo.png" alt="Green office" /></a>
+    <!-- La balise NAV regroupe des liens de navigation sur le site -->
+		<nav>
+			<a href="#">Location</a>
+			<a href="#">About Us</a>
+			<a href="#">Contact</a>
+		</nav>
+	</header>
+	<!--MAIN : partie regroupant le contenu de cette page (la balise MAIN est unique dans le document )-->
+	<main>
+    <!-- ARTICLE permet de regrouper des éléments d'une même thématique : doit garder son sens si sorti du contexte de la page -->
+		<article>
+			<h1>Who we are</h1>
+      <!-- Un élément peut recevoir plusieurs valeurs de classes -->
+			<img class="float float-left" src="img/who.jpg" alt="Photo de l'équipe" />
+			<p>Raptim igitur properantes ut motus sui rumores celeritate nimia praevenirent, vigore corporum ac levitate confisi per flexuosas semitas ad summitates collium tardius evadebant.</p>
+			<p>Et cum superatis difficultatibus arduis ad supercilia venissent fluvii Melanis alti et verticosi, qui pro muro tuetur accolas circumfusus, augente nocte adulta terrorem quievere paulisper lucem opperientes. arbitrabantur enim nullo inpediente transgressi inopino adcursu adposita quaeque vastare, sed in cassum labores pertulere gravissimos.</p>
+      <!-- L'apparence sous forme de bouton sera obtenu en CSS, il s'agit bien d'un lien -->
+			<a class="btn" href="#">Read more</a>
+		</article>
+		<article>
+			<h1>What we do</h1>
+			<img class="float float-left" src="img/what.jpg" alt="Photo de l'équipe" />
+			<p>Raptim igitur properantes ut motus sui rumores celeritate nimia praevenirent, vigore corporum ac levitate confisi per flexuosas semitas ad summitates collium tardius evadebant.</p>
+			<p>Et cum superatis difficultatibus arduis ad supercilia venissent fluvii Melanis alti et verticosi, qui pro muro tuetur accolas circumfusus, augente nocte adulta terrorem quievere paulisper lucem opperientes.</p>
+			<p>Raptim igitur properantes ut motus sui rumores celeritate nimia praevenirent, vigore corporum ac levitate confisi per flexuosas semitas ad summitates collium tardius evadebant.</p>
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Consectetur adipisicing elit</li>
+				<li>sed do eiusmod tempor incididunt</li>
+				<li>ut labore et dolore magna aliqua</li>
+				<li>sed do eiusmod tempor incididunt</li>
+				<li>ut labore et dolore magna aliqua</li>
+			</ul>
+			<a class="btn" href="#">Read more</a>
+		</article>
+	</main>
+	<!--FOOTER : comme pour le header, lorsqu'il est placé directement dans body, il se répète sur toutes les pages du site - Son rôle est de fournir des informations complémentaires sur la partie parente, donc sur le site -->
+	<footer>
+    <p>
+	    <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">
+        <img alt="Propriété de la 3W Academy" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png" />
+      </a><br>
+      Cet exercice de <a href="https://3wa.fr">3W Academy</a> est mis à disposition pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International<br>
+      Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr" rel="cc:morePermissions">contact@3wa.fr</a><br>
+      Les maquettes ont été réalisées par <a href="http://www.justine-muller.fr">Justine Muller</a>.
+    </p>
+	</footer>
+</body>
+</html>
