@@ -1,0 +1,268 @@
+
+header {
+  background-image: url(../img/fond.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position : center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:active {
+  color: red;
+}
+
+h1 {
+  padding-top: 1em;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+  color : white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+nav {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  padding-top: 1em;
+
+}
+
+nav a {
+  padding: 0 1em 0 1em;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+nav .fa, nav .fab, nav .fad, nav .fal, nav .far, nav .fas {
+  display : block;
+  color: white;
+}
+
+header p {
+  margin: 1em 0 1em 0;
+  padding: 0.5em 0 0.5em 0;
+  color: white;
+  background-color:rgba(138, 98, 114, 0.18);
+}
+
+
+p {
+  font-family: 'Playfair Display', serif;
+
+}
+
+main > article {
+  clear: both;
+  margin : 0 10%;
+  overflow: hidden;
+
+}
+
+hr {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: 10%;
+  margin-right: 10%;
+  color:rgba(138, 98, 114, 0.5);
+}
+
+
+div article h2 {
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+}
+
+iframe {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  background-image: url(../img/background_section.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position : center;
+  text-align: center;
+  color: white;
+  padding : 1em 0;
+}
+
+.img_left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.img_right {
+  float: right;
+  margin-bottom: 2em;
+}
+
+.section {
+  background-image: url(../img/background_section.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position : center;
+  clear: both;
+  padding: 0 5%;
+}
+
+.section article {
+  display: inline-block;
+  vertical-align: top;
+  width: 23.33%;
+  margin: 0 5%;
+  text-align: center;
+  color: white;
+}
+
+nav a.active_page {
+  color: white;
+  font-style: italic;
+}
+
+
+/*CSS TABLEAUX*******************************************************************/
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+caption {
+  font-family: 'Kaushan Script', cursive;
+  text-align: left;
+  padding: 0.5em;
+  font-size: 1.5em;
+  border: 1px solid #cccccc;
+  background-color: #c4a9de;
+  color: white;
+}
+
+th {
+  border: 1px solid #cccccc;
+  color: #364f4c;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+th:first-child {
+  text-align: left;
+  padding-left: 1em;
+}
+
+td:first-child {
+  text-align: left;
+  padding-left: 1em;
+}
+
+td:last-child {
+  color: #c4a9de;
+}
+
+
+td {
+  border: 1px solid #cccccc;
+  color: #364f4c;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+tr:last-child td:last-child {
+  text-align: center;
+  color: #364f4c
+}
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+fieldset {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 1px solid #cccccc;
+  color: #364f4c;
+}
+
+fieldset p {
+  display: inline-block;
+}
+
+select {
+ width: 90%;
+ margin-left: 2em;
+ margin-top: 1em;
+ margin-bottom: 1em;
+}
+
+input {
+  border-bottom: 1px solid #cccccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+legend {
+  margin-left: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+}
+
+.send_btn {
+  padding: 0.5em;
+  background-color: #8c63bf;
+  color: white;
+}
+
+.reset_btn {
+  padding: 0.5em;
+  background-color: #aaaaaa;
+  color: white;
+}
+
+.form_btn {
+  text-align: center;
+}
+
+.deco_h2 {
+  margin-top: 2em;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: grey;
+}
+
+.form_ans {
+  text-align: center;
+}
+
+/*Je peux cibler directement un attribut au lieu de faire une classe. Exemple : [type=submit] {} (ceci est un selecteur d'attribut)*/

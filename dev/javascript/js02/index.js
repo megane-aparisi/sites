@@ -7,6 +7,8 @@ document.write (array[0]);
 
 console.table (array)*/
 
+/*On peut concaténer aussi avec ${nomdevar}`;   ****/
+
 let array = []
 array[0] = "lundi"
 array[1] = "mardi"

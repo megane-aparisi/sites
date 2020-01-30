@@ -1,0 +1,128 @@
+/*Pour qu'une image ne déborde pas de son conteneur :   max-width: 100%;
+  height: auto;
+  vertical-align: top; */
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  font-size: 62.5%; /*62.5% de 16 ca fait 10px ; 1rem=10px*/
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  color: #666;
+  background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #30a894;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration : underline;
+}
+
+h1, h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #30a894;
+  color: #30a894;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+}
+
+.container {
+  margin-right : 2rem;
+  margin-left : 2rem;
+}
+
+@media screen and (min-width : 1024px) {
+  .container {
+    margin-right : 10%;
+    margin-left : 10%;
+  }
+}
+
+header {
+
+  text-align: center;
+}
+
+nav {
+  background-color: #30a894;
+  text-transform: capitalize;
+}
+
+nav a {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  display: block;
+  color: white;
+}
+
+@media screen and (min-width : 1024px) {
+  nav a {
+   display: inline-block;
+   width: 33.33%;
+  }
+}
+
+aside {
+  display: none;
+}
+
+@media screen and (min-width : 768px) {
+  aside {
+   display: block;
+   background-color: #b8dcb1;
+   padding: 2rem;
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  aside {
+   float: right;
+   width: 30%;
+  }
+
+  section {
+   float: left;
+   width: 70%;
+   padding-right: 2rem;
+  }
+
+  aside article h2 {
+    border-bottom: none;
+  }
+}
+
+
+/*couleur du vert aside #b8dcb1*/
