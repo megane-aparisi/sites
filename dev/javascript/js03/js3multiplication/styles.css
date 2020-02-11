@@ -1,0 +1,9 @@
+td {
+  background-color: grey;
+  padding: 2em;
+  color: white;
+}
+
+.diag {
+  background-color: green;
+}
