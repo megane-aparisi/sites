@@ -1,0 +1,223 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size : 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background : #555;
+  font-family: 'Open Sans', sans-serif;
+  font-size : 1.6rem;
+}
+
+a {
+  color : #eee;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color : white;
+	text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height : auto;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic; /* lissage pour IE */
+  image-rendering: -webkit-optimize-contrast; /* lissage pour Chrome au redimensionnement*/
+}
+
+header, footer {
+  padding : 1rem 1em;
+  background-color : #444;
+  color : white;
+}
+
+
+header strong {
+  display: block;
+  font-size : 1.5em;
+}
+
+main {
+  max-width: 1024px;
+  margin: auto;
+}
+
+footer {
+  position : relative;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+footer > * {
+  margin : 0;
+}
+
+#goTop {
+  position : absolute;
+  top : 0;
+  left : 50%;
+  transform: translate(-50%, -100%);
+  background-color: #444;
+  padding : 0.5rem 1rem;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+
+/* ******************************************************* */
+/* ************** Les éléments du caroussel ************** */
+/* ******************************************************* */
+
+/*
+*  Embarquer figure et .slider-navigation
+*  dans un élément en position relative : .slider-layout
+*    -> les éléments enfants seront en position absolute afin d'apparaître sur la photo :
+*
+*       1 - liens précédent et suivant (.next,.prev)
+*       2 - figcaption (.slider-legend )
+*
+*    -> la hauteur de .slider-layout sera donc celle des photos
+*/
+
+
+.slider-layout {
+  position : relative;
+}
+
+.slider-figure {
+  display : none;
+  margin : 0 6em;
+  padding : 1rem;
+  border-radius : 1rem;
+	background : rgba(255,255,255,0.8);
+  box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.5);
+  will-change: transform;
+}
+
+.slider-figure.active {
+  display : block;
+}
+
+.slider-picture {
+  border-radius : 1rem;
+}
+
+.slider-legend {
+  position : absolute;
+  left : 1rem; right :1rem; top : 1rem;
+  padding : 1rem;
+  border-radius : 1rem 1rem 0 0;
+  background : rgba(255, 255, 255, 0.5);
+  font-size : 1.6em;
+  font-weight : bold;
+}
+
+.next, .prev {
+  display: inline-block;
+  width : 2em;
+  height : 2em;
+  line-height : 2em;
+  position : absolute;
+  top : 50%;
+  transform : translateY(-50%);
+	text-align: center;
+  font-size : 3em;
+  color : white;
+}
+
+.next:hover,
+.prev:hover {
+  background-color : rgba(255,255,255,0.5);
+  color : #dd5735;
+  text-decoration: none;
+}
+
+.prev {
+  left : 0;
+}
+
+.next {
+  right : 0;
+}
+
+/* ETAPE 3 : PAGINATION */
+
+.slider-pagination {
+  position : absolute;
+  z-index : 200;
+  bottom : 1rem; left : 0; right : 0;
+  margin : 0;
+  padding : 0;
+  list-style : none;
+  text-align : center;
+}
+
+.slider-pagination li {
+  display : inline-block;
+  width : 20px;
+  height : 20px;
+  margin : 0.5rem;
+  padding : 0;
+  background-color : white;
+  border : 2px solid  white;
+  box-shadow : 5px 5px 10px rgba(0,0,0,0.8);
+  border-radius : 50%;
+  cursor : pointer;
+  cursor : zoom-in;
+}
+
+
+.slider-pagination li:hover {
+  background-color : #dd5735;
+  border-color : #dd5735;
+}
+
+.slider-pagination li.selected {
+  background-color : #dd5735;
+}
+
+
+/* ETAPE 4 : MINIATURES */
+
+.slider-thumbnails {
+  padding : 0;
+	text-align: center;
+}
+
+.item-thumbnail {
+  display : inline-block;
+  width : 80px;
+  height : 80px;
+  margin : 5px;
+  border : 5px solid rgba(255,255,255,0.6);
+  border-radius : 5px;
+  overflow: hidden;
+  cursor : pointer;
+  cursor : zoom-in;
+}
+
+.thumbnail {
+  height : 100%;
+  max-width : max-content;
+  filter : grayscale(80%);
+  opacity : 0.5;
+}
+
+.thumbnail:hover,
+.thumbnail.selected {
+  filter : grayscale(0);
+  opacity : 1;
+}

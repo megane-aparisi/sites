@@ -58,4 +58,36 @@ Dans les tableaux on peut stocker nombre et string.
 let array = ["toto", 10, "tata"] (chaque valeur de ce tableau (toto, 10 , tata) est associé à un index(0.1.2.3....))
 
 document.write array [0] (va m'afficher toto)
- 
+--------------------------------------
+je ne peux pas réassiger une constante, mais je peux la muter : 
+
+const obj = {
+prenom : "hamza"
+age : 21
+}
+
+obj.prenom = "anne";
+je change le prenom en faisant ca
+--------------------------------------
+const html = 
+<div>
+<p>${bonjour}</p>
+<p>${prenom}</p>
+<p>${phrase}</p>
+</div>
+document.write(html);
+-------------------------------------
+let mms = 20;
+let enfants = 3;
+let chaqueenfantprend = Math.floor(mms / enfants);
+let lesparents = mms % enfants;
+-------------------------------------
+let nombre = 10.5;
+console.log(parseInt(nombre));
+console.log(parseFloat(10));
+------------------------------------
+Voir notion CamelCase
+------------------------------------
+addEventListener --> event.PreventDefaut
+------------------------------------
+

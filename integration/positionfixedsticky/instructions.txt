@@ -1,0 +1,5 @@
+A l'aide de la propriété "position" et de ses valeurs "fixed" et "sticky", reproduire la maquette jointe.
+Le contenu fait 80% de la fenêtre du navigateur.
+Faire en sorte d'avoir suffisamment de contenu pour avoir un scroll (par exemple, 2 sections ayant chacune 2 articles avec 2. paragraphes)
+Le pied de page est présent en bas de la fenêtre du navigateur, quel que soit le scroll.
+Par défaut, le menu se trouve sous le titre et la phrase d'introduction. Au scroll, celui-ci remonte et se cale à 2rem du haut de la page pour rester fixe ensuite.

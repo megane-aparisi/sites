@@ -1,0 +1,311 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /*62.5% de 16 ca fait 10px ; 1rem=10px*/
+  background-image: url(../img/bg_body.svg);
+  background-color: rgba(51, 51, 51, 0.80);
+
+}
+
+body{
+  font-family: "Bodega Sans", arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+section, .flexslider {
+  width: 80%;
+  margin: auto;
+}
+
+article {
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:focus,
+a:active {
+
+}
+
+p {
+  font-family: Arial;
+}
+
+nav a {
+  display: block;
+  text-align: right;
+  color: white;
+  padding: 2rem;
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.img_logo{
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+@media screen and (min-width : 1024px) {
+  .img_logo{
+    float: left;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white
+}
+
+h2, h3 {
+  text-transform: uppercase;
+  color: white;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width : 1024px) {
+  h2, h3 {
+    text-transform: uppercase;
+    color: white;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+h3 {
+  color: #ff9d00;
+  text-align: center;
+  border-bottom: solid 2px #ff9d00;
+}
+
+figure {
+  margin: 0;
+}
+
+video {
+  width: 100%;
+  margin-bottom: 7rem;
+}
+
+@media screen and (min-width : 1024px) {
+  video {
+    width: 50%;
+    max-width: 780px;
+    float: right;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  .text_knowus {
+    width: 45%;
+    float: left;
+  }
+}
+
+.article_moto {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  color : grey;
+}
+
+@media screen and (min-width : 1024px) {
+  .article_moto {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  .article_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+/*Police*********************************************************************************/
+@font-face {
+    font-family: "Bodega Sans";
+    src: url(../webfonts/BodegaSans_Black.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**************************************************************************************
+BANNIERE
+***************************************************************************************/
+.banner {
+  background-image:linear-gradient(-20deg, #333333 50%, white 50%);
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 4rem;
+  padding: 3rem;
+}
+
+@media screen and (min-width : 1024px) {
+  .banner {
+    width: 100%;
+    background-image:linear-gradient(-50deg, #333333 50%, white 50%);
+    text-align: left;
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+/**************************************************************************************
+FOOTER
+***************************************************************************************/
+
+footer {
+  width: 80%;
+  clear: both;
+  margin: auto;
+  text-align: center;
+  box-shadow:  1px 1px 25px #333333;
+}
+
+
+@media screen and (min-width : 1024px) {
+  footer {
+    width: 100%;
+    clear: both;
+    margin: auto;
+    padding-bottom: 3rem;
+    text-align: center;
+    box-shadow:  1px 1px 25px #333333;
+  }
+}
+
+footer nav {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width : 1024px) {
+  footer nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.nav_footer a {
+  padding: 2rem;
+  color: white;
+  text-decoration: underline;
+  font-family: arial;
+}
+
+.footer_pic {
+  width: 50;
+}
+
+
+.color_footer{
+  color: grey;
+  overflow: hidden;
+}
+/**************************************************************************************
+CLASS
+***************************************************************************************/
+.box_shadowh2 {
+  margin-top: 6rem;
+  padding : 2rem;
+  border-top: solid 2px rgba(63, 63, 63, 0.50);
+  border-left: solid 2px rgba(63, 63, 63, 0.50);
+
+}
+
+.color_word {
+  color: #ff9d00;
+}
+
+.color_p {
+  color: white;
+  overflow: hidden;
+}
+
+
+.button {
+  background-color: #ff9d00;
+  color: white;
+  text-align: center;
+  padding: 1rem 5rem;
+}
+
+.logo_sm {
+  color: white;
+  font-size: 5rem;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+@media screen and (min-width : 1024px) {
+  .logo_sm {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+/**************************************************************************************
+MEDIA QUERY
+***************************************************************************************/
+@media screen and (min-width : 1024px) {
+
+  }
+  /*
+}
+
+/*
+@media screen and (max-width : 1023px) {
+
+}
+*/
+
+@media screen and (min-width : 768px) {
+
+}
+/*
+@media screen and (max-width : 767px) {
+
+}
+*/

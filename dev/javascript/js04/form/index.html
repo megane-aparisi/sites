@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Module 1 JavaScript : Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/index.js"></script>
+</head>
+  <body>
+    <header>
+
+    </header>
+    <main>
+      <form method="get" action="contact.html" id="mon_form"><!--2 methodes : method=GET qui passe par l'URL ou method=POST qui envoi les données. Un deuxième attribut de form est Action-->
+              <fieldset>
+                <legend>Vos coordonnées</legend>
+                <div class="form_ans">
+                  <p>
+                  <label for="firstname">Votre prénom</label>
+                  <input type="text" id="firstname" name="user_firstname" required="required">
+                  </p>
+                  <p>
+                  <label for="lastname">Votre nom</label>
+                  <input type="text" id="lastname" name="user_lastname" required="required">
+                  </p>
+                  <p>
+                  <label for="email">Votre email</label>
+                  <input type="email" id="email" name="user_email" placeholder="nom@domaine" required="required">
+                  </p>
+                </div>
+              </fieldset>
+              <p class="form_btn">
+              <button class="send_btn" type="submit" name="button">Envoyer</button>
+              <button class="reset_btn" type="reset">Effacer</button>
+              </p>
+            </form>
+    </main>
+
+  </body>
+</html>

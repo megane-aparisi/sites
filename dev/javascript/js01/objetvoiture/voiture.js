@@ -3,7 +3,7 @@ let voiture = {
   year_fab: new Date('2010-01-01'),
   year_pur: new Date('2020-01-01'),
   passengers: ["Anne", "Cindy", "Megane"]
-}
+};
 
 
 document.write ("<ul>");

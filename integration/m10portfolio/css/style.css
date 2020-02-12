@@ -1,0 +1,374 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /*62.5% de 16 ca fait 10px ; 1rem=10px*/
+}
+
+body{
+  font-family: arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-family: 'Bree Serif', serif;
+  background-image: url(../img/fond.png);
+  color: grey;
+}
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  text-align: center;
+}
+
+
+/***************HEADER #1 ****************************************************/
+
+.banner * {
+  display: block;
+  margin: 3rem auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo{
+  width: 5rem;
+  margin:
+}
+
+.textlogo{
+  font-size: 4rem;
+}
+
+nav {
+  font-size: 2rem;
+}
+
+.banner a{
+  transition: all 1s ease;
+}
+
+.banner a:hover,
+.banner a:focus{
+  color: #f32b5c;
+}
+
+.link-logo:hover img {
+  transform: scale(1.25);
+}
+
+nav a:hover,
+nav a:focus{
+  transform: translateY(10px);
+}
+
+@media screen and (min-width : 1024px) {
+  .container {
+    padding : 0;
+  }
+  .banner {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .banner a {
+    display: inline-block;
+    color: grey;
+    text-decoration: none;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .logo{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .link-logo{
+    display: inline-block;
+    font-size: 2.5rem;
+  }
+
+}
+
+
+/***************************SECTION SKILLS***********************************/
+.skills {
+  display: flex;
+  margin: auto;
+  align-items:center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+figcaption h3,p {
+  margin-top : 0;
+  margin-bottom: 0;
+}
+
+figure {
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width : 1024px) {
+  .skills {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+
+  /***************************SECTION SERVICES***********************************/
+  .services {
+    display: flex;
+    margin: auto;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .services figcaption {
+    flex-direction: column;
+  }
+
+  .h3_services{
+   color: #f32b5c;
+   font-size : 1.7rem;
+  }
+
+  .services i {
+    background-color: #eff0f2;
+    border-radius: 100px;
+    border: solid 1px #e1e2e4;
+    padding: 2rem;
+  }
+
+  @media screen and (min-width : 1024px) {
+    .services {
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+
+    .services figure{
+      width: 30%;
+    }
+
+  }
+
+figure i:hover{
+  /*animation: bounce 0.5s ease infinite alternate;*/
+  animation: bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-20px);}
+}
+
+/***************Realisations**************************************************/
+
+.bloc_realisations{
+  text-align: left;
+}
+
+@media screen and (min-width : 1024px) {
+  .bloc_realisations img {
+    width: 50%;
+  }
+  .articles:nth-child(even) img{
+    display: inline-block;
+    float: right;
+    padding-left: 2rem;
+  }
+  .articles:nth-child(odd) img{
+    display: inline-block;
+    float: left;
+    padding-right: 2rem;
+  }
+}
+
+.cta_bis {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #f32b5c;
+}
+
+.cta_bis i{
+  padding-left: 0.5rem;
+}
+
+/******************************************************************************/
+main > header {
+  min-height: 70vh;
+  background-image: url(../img/bg_header.png);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10rem 1.5rem;
+}
+@media screen and (min-width : 1024px) {
+  main > header {
+    min-height: 75vh;
+    background-size: cover;
+    padding: 15rem 7rem;
+  }
+}
+
+.cta {
+  display: inline-block;
+  background-color: #f32b5c;
+  border-radius: 5px;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+
+}
+
+.cta:hover,
+.cta:focus {
+  background-color: white;
+  color: #f32b5c;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.19rem;
+  color: #f32b5c;
+  margin-top: 2rem;
+}
+
+h1:before,
+h2:before,
+h1:after,
+h2:after {
+  content: "-";
+}
+
+figure {
+  margin: 0;
+}
+/****FORMULAIRE*******************************************************/
+
+fieldset{
+  border-style: none;
+
+}
+
+.field {
+  display: flex;
+  border-radius: 50px;
+  border: solid 1px #989898;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width : 1024px) {
+  .form_ans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .field {
+    flex-basis: 50%;
+  }
+  .field:last-child {
+    flex-basis: 100%;
+  }
+}
+
+label{
+  padding-right: 2rem;
+
+}
+
+input{
+  flex: 1 1 auto;
+  border-style: none;
+}
+
+.send_btn{
+  padding: 1.7rem;
+  background-color: #f32b5c;
+  color: white;
+  border: none;
+}
+
+.reset_btn{
+  padding: 1.7rem;
+  background-color: #989898;
+  color: white;
+  border: none;
+}
+legend {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  clip: rect(1px,1px,1px,1px,);
+  opacity: 0;
+  font-size: 0;
+}
+
+footer{
+  margin-top: 3rem;
+  line-height: 1.5rem;
+}
+
+/**************************************************************************************
+MEDIA QUERY
+***************************************************************************************/
+@media screen and (min-width : 1024px) {
+
+}
+
+@media screen and (max-width : 1023px) {
+
+}
+
+@media screen and (min-width : 768px) {
+
+}
+
+@media screen and (max-width : 767px) {
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8">
+      <title>Diaporama Art de rue</title>
+  		<meta name="description" content="Mise en forme d'un diaporama : apprentissage des positions en CSS">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap" rel="stylesheet">
+      <link href="./css/normalize.css" rel="stylesheet">
+      <link href="./css/all.min.css" rel="stylesheet">
+      <link href="./css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="./">
+        <strong>Art de rue</strong>
+        <small>HTML/CSS : les positions en CSS</small>
+      </a>
+    </header>
+
+    <main class="container">
+
+      <div class="slider-layout">
+        <figure class="slider-figure active">
+          <img class="slider-picture" src="img/1.jpg" alt="">
+          <figcaption class="slider-legend">Velo Vintage par _cristina</figcaption>
+        </figure>
+        <figure class="slider-figure">
+          <img class="slider-picture" src="img/2.jpg" alt="">
+          <figcaption class="slider-legend">Rue urbaine par Wimkantona</figcaption>
+        </figure>
+        <figure class="slider-figure">
+          <img class="slider-picture" src="img/3.jpg" alt="">
+          <figcaption class="slider-legend">Graffiti par Joenomias</figcaption>
+        </figure>
+        <figure class="slider-figure">
+          <img class="slider-picture" src="img/4.jpg" alt="">
+          <figcaption class="slider-legend">Escalier par Pasja1000</figcaption>
+        </figure>
+        <figure class="slider-figure">
+          <img class="slider-picture" src="img/5.jpg" alt="">
+          <figcaption class="slider-legend">Penang Asia par Onyva</figcaption>
+        </figure>
+        <figure class="slider-figure">
+          <img class="slider-picture" src="img/6.jpg" alt="">
+          <figcaption class="slider-legend">Artiste de rue par Wobbut</figcaption>
+        </figure>
+        <nav class="slider-navigation">
+          <a href="#"
+            rel="prev"
+            id="prev"
+            class="prev"
+            title="Image précédente">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </a>
+          <a href="#"
+            rel="next"
+            id="next"
+            class="next"
+            title="Image suivante">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </nav>
+
+      </div>
+
+
+    </main>
+
+    <footer id="mentions" class="mentions">
+      <a href="http://3wa.fr/" title="Site de la 3WA"><img src="./img/3wa.png" alt="3W Academy" width="50"></a>
+			<p><strong> &copy; 3W Academy - Formation Développeur WEB - Tous&nbsp;droits&nbsp;réservés</strong><br>
+			Cet exercice est mis à disposition des stagiaires dans le cadre exclusif de leur apprentissage</p>
+      <p>Nous remercions les auteurs de ces photos récoltées sur <a href="https://pixabay.com/" target="_blank">Pixabay</a></p>
+      <a id="goTop" href="#" aria-label="Haut de page">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+			<a>
+		</footer>
+    <!-- Affichage du support 3wa -->
+    <script src=".3wa/js/resources.js" data-md="./support.md"></script>
+
+  </body>
+</html>

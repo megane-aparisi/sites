@@ -1,0 +1,196 @@
+/************************ GENERAL **********************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.6;
+  color : #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+a {
+	color : orangered;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	text-decoration: underline;
+}
+
+
+.container {
+	margin: 0 20%;
+}
+
+
+
+/* Header */
+
+.banner {
+	padding : 2rem;
+}
+
+.banner-link {
+	display: inline-block;
+	text-decoration: none;
+	line-height: 1;
+	color : orangered;
+}
+
+.banner-link strong {
+	display: block;
+	font-size: 1.3em;
+	line-height: 1.6;
+}
+
+
+/* menu de navigation */
+
+nav {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  padding : 1px 0;
+	background-color: orangered;
+  /* Redéfinir l'ordre naturel d'empilement
+  (si contenu positionné dans le code HTML suivant, dans main, par exemple) */
+  z-index : 2000;
+}
+
+/* Supprimer les styles de liste pour le menu */
+nav ul, nav li {
+	margin : 0;
+	padding : 0;
+	list-style: none;
+}
+/* Cibler la liste principale : enfant direct de nav */
+nav > ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Cibler les liens de la nav :
+à l'arrivée, s'appliquera à ceux du sous-menu */
+nav a {
+  font-size: 1rem;
+  color : #444;
+}
+
+/* Cibler les liens de premier niveau */
+nav > ul > li > a {
+  display: inline-block;
+	padding : 1rem;
+	text-decoration: none;
+	color: white;
+  font-size : 1.5em;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Lien de premier niveau au survol */
+nav > ul > li > a:hover,
+/* Garder l'effet de survol sur le lien si on survole un sous-menu
+(dans ce cas, on ne survole plus le lien ! ) */
+nav > ul > li:hover > a {
+	background-color: white;
+	color : orangered;
+	text-decoration: none;
+}
+
+
+/* Positionner le sous-menu par rapport à la li ascendante */
+nav > ul > li {
+  position : relative;
+}
+
+/* Sous-menu */
+nav > ul > li > ul {
+  display: none; /* Caché au chargement */
+  position : absolute;
+  left : 1em;
+  top : 100%;
+  width : 20em;
+  background : #fff;
+  border : 1px solid orangered;
+  border-top: none;
+  padding : 1rem;
+}
+
+/* Faire apparaître le sous-menu : enfant d'une li survolée */
+nav > ul > li:hover > ul {
+  display : block;
+}
+
+
+
+/* main */
+
+main {
+  /* Pour introduire l'importance de z-index sur la nav positonnée */
+  position : relative;
+}
+
+
+
+/* Pied de page */
+
+body {
+	/*
+	Si footer fixed :
+	padding correspondant à la hauteur de 1 ligne + padding appliqué à footer
+	padding-bottom : calc(1rem + (1.6 * 1em));
+	*/
+}
+
+footer {
+	/*
+	Si on fixe le footer, il masque le contenu au dessus
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	*/
+	position: -webkit-sticky;
+	position: sticky;
+	bottom : 0;
+	background-color: orangered;
+	color: white;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+/* Lien Haut de page fixé à la fenêtre */
+#goTop {
+	position : fixed;
+	bottom : 5rem;
+	right : 2rem;
+	font-size: 2em;
+}
