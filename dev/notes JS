@@ -23,8 +23,9 @@ git -h = verifier que j'ai le logiciel
 git add. = ajoute tout mes dossier dans le repository
 
 tous les soirs : 
+cd sites
 git add .
-git commit -m "first commit"
+git commit -m 
 git  push
 
 

@@ -12,15 +12,32 @@ get_answers_form.addEventListener(`submit`, function(a){
   alert(`Vous avez envoyé votre formulaire, merci !`);
 }); */
 
-let test = document.querySelector("form");
+//reccueillir les valeurs
+let get_answers_form = document.querySelector("form")
+let firstname = document.getElementById("firstname")
+let lastname = document.getElementById("lastname")
+let email = document.getElementById("email")
 
-test.addEventListener("submit", function(event) {
+get_answers_form.addEventListener("submit", function(event) {
     event.preventDefault();
-    let input = test.querySelector("input");
+    console.log(firstname.value + lastname.value + email.value)
+});
 
-    let text = document.querySelector("div");
+//faire un href et l'empecher d'aller à la page indiquée
 
-    text.style.color = "red";
-    text.innerText = `${input.value}`;
-    console.log(text.innerText)
-})
+let lien = document.querySelector("a")
+lien.addEventListener("click", function(event) {
+  event.preventDefault()
+});
+
+//faire un objet
+
+let objet = {
+  nom: "aparisi",
+  prenom: "megane",
+  age: "27",
+  phrase: function(){
+    return this.nom + this.prenom + this.age}
+}
+
+console.log(objet.phrase())
