@@ -28,7 +28,7 @@ git add .
 git commit -m 
 git  push
 
-
+pour acceder au log : sudo tail -f /var/log/apache2/access.log
 	
 
 ------------------------------------

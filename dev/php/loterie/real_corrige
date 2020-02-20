@@ -1,0 +1,18 @@
+<?php
+
+function genNumbers($numbers = [], $i=0)
+{
+  for($i; $i <= 6; $i++){
+    $number = rand(1, 49);
+    if (in_array($number, $numbers)){
+        var_dump($number);
+        var_dump($numbers);
+        return genNumbers($numbers, $i);
+    }
+    $numbers[] = $number;
+  }
+  return $numbers;
+}
+
+echo '<pre>';
+$numbers = genNumbers();

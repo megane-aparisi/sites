@@ -1,0 +1,70 @@
+CREATE DATABASE todolist CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+
+CREATE TABLE tasks (id INT(11) PRIMARY KEY AUTO_INCREMENT) : 
+
+Id INT() : défini que l'id sera un chiffre et 11 me fait enormement d'id possible
+PRIMARY KEY (dit a SQL que ce sera l'identifiant unique de la tache)
+auto increment (a chaque tache sauvegardé ce champs id ce mettra à jour pour la suivante)
+
+deadline DATE NULL : NULL veut dire que le champs n'est pas obligatoire l'inverse est NOT NULL
+
+ titre CHAR(50) : char() sert à déclarer une string et dans les parenthèses on met le nb de caractère maximum.
+
+descriptionT TEXT NOT NULL : par rapport à char, TEXT n'est pas limité en nombre de caractères. 
+
+CREATE TABLE tasks (id INT(11) PRIMARY KEY AUTO_INCREMENT, 
+                    deadline DATE NOT NULL,
+                     titre CHAR(50) NOT NULL,
+                       description TEXT(1000) NOT NULL,
+                        priorite CHAR(7) NOT NULL,
+			 users_id int(11)
+                          )ENGINE=INNODB CHARACTER SET=utf8;
+
+DROP TABLE tasks : J'ai jeté ma table;
+
+
+
+CREATE TABLE users(id INT(11) PRIMARY KEY AUTO_INCREMENT, 
+                     name CHAR(150) NOT NULL,
+                      email CHAR(150) NOT NULL UNIQUE (UNIQUE signifie qu'on le met en cache, qu'on l'index pour l'utiliser plus tard de manière unique - si l'utilisateur met deux fois lemail ca ne marche pas)
+                  );
+
+La commande ALTER TABLE en SQL permet de modifier une table existante.
+
+FOREIGN KEY permet d'ajouter une clé etrangère "tel champs reference tel champs" 
+
+ALTER TABLE tasks
+ADD users_id int(11);
+
+ALTER TABLE tasks
+ADD CONSTRAINT fk_user_id  (fk pour foreign key et c'est un nom que l'on choisi, toto , tata etc)
+FOREIGN KEY (users_id) REFERENCES users(id);
+
+Créer une données et l'envoyer dans une table : 
+INSERT INTO users (name, email) VALUES ('Ursule', 't.urusule@gmail.com');
+
+INSERT INTO tasks (deadline, titre, description, priorite, users_id ) VALUES ('2020-02-20', 'faire les courses', 'ma liste de courses', 'normal', 1);
+
+Afficher mes données : SELECT * FROM tasks;
+
+SELECT * FROM `tasks` WHERE users_id = 1;
+SELECT titre, description, users_id as identifiant FROM `tasks` WHERE users_id = 1 (me renomme users_id par identifiant)
+
+depuis le terminal : mysql -uroot -p
+Enter password: 
+
+SELECT titre, deadline FROM `tasks` WHERE users_id = 1 ORDER BY deadline (me tri mes champs par la deadline)
+
+SELECT titre, deadline FROM `tasks` WHERE users_id = 1 ORDER BY deadline DESC (inverse le sens de tri dans deadline)
+
+SELECT name, titre from users as u JOIN tasks as t ON u.id = t.users_id WHERE u.id = 1 (j'ai mixé mes deux tables)
+
+SELECT MAX(price) FROM products (permet de trouver le produit le plus cher) (MIN pour miniumum AVG pour average donc la moyenne)
+
+SELECT price FROM products WHERE price BETWEEN 50 and 100
+
+select price from products having price > 50
+
+select name from products where name like 'pro%' (si ce que je cherche commence par ca (ce qui est avant le %) alors tu me sors ça)

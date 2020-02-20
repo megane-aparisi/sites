@@ -58,6 +58,14 @@ var_dump($montableauassociatif);
 echo "<ul>";
 foreach ($montableauassociatif as $element => $value) {
   echo "<li>$element => {$value}</li>";
-  
+
 }
 echo "</ul>";
+
+function functionNanme($value) {
+  #code;
+}
+
+for ($i=0; $i <10 ; $i++) {
+  // code...
+}
