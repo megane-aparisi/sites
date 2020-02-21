@@ -68,3 +68,18 @@ SELECT price FROM products WHERE price BETWEEN 50 and 100
 select price from products having price > 50
 
 select name from products where name like 'pro%' (si ce que je cherche commence par ca (ce qui est avant le %) alors tu me sors ça)
+
+SELECT NOW() --> Permet d'afficher le jour et la date à l'heure précise
+
+Exercice BDD : 
+
+1. SELECT addressLine1, addressLine2, city, state, country FROM `offices` ORDER BY country, state DESC
+2. SELECT productName, productCode FROM products WHERE productLine = 'planes' ORDER BY productVendor, quantityInStock DESC
+3. SELECT productName, productVendor, MSRP FROM `products` WHERE MSRP >= 132 ORDER BY productName
+4. SELECT productCode, productName, productScale, quantityInStock FROM `products` WHERE productScale = '1:10' OR productScale = '1:18' ORDER BY quantityInStock DESC
+5. SELECT productCode, productName, buyPrice FROM `products` WHERE buyPrice BETWEEN 60 AND 90 ORDER BY buyPrice
+6. SELECT productName, productVendor, quantityInStock, MSRP-buyPrice AS marge FROM products WHERE productLine = 'motorcycles' ORDER BY marge DESC
+7. SELECT orderNumber, orderDate, shippedDate, status, DATEDIFF(shippedDate, orderDate) AS ecart_dc_dl FROM orders WHERE (status = 'In Process') OR (status = 'Shipped' AND DATEDIFF(shippedDate, orderDate) >= 10)
+8. SELECT productName, MSRP*quantityInStock AS stock_value FROM `products` WHERE productName like '196%'
+9. SELECT productVendor, ROUND(AVG(MSRP)) FROM products GROUP BY productVendor ORDER BY AVG(MSRP)
+10. SELECT productLine, COUNT(productName) FROM products GROUP BY productLine
