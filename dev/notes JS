@@ -92,3 +92,16 @@ Voir notion CamelCase
 addEventListener --> event.PreventDefaut
 ------------------------------------
 
+function test() {
+    console.log('hover');
+}
+div.addEventListener('mouseover', test);div.addEventListener('mousemove', function() {
+    console.log('hover');
+});div.addEventListener('mouseenter', function() {
+    console.log('mouse enter');
+});div.addEventListener('mouseout', function() {
+    console.log('mouse out');
+});div.addEventListener('click', function() {
+   console.log('click');
+});
+
