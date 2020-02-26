@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link href="./css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+  <header>
+    <strong>Sliders, les mondes parrallèles !</strong>
+    <a href="#toolbar" id="toolbar-toggle"><i class="fas fa-arrow-down"></i>Barre d'outils</a>
+      <nav id="toolbar">
+        <button id="slider-previous"><i class="fas fa-backward"></i></button>
+        <button id="slider-toggle"><i class="fas fa-play"></i></button>
+        <button id="slider-next"><i class="fas fa-forward"></i></button>
+        <button id="slider-random"><i class="fas fa-random"></i></button>
+      </nav>
+  </header>
+  <main class="container">
+   <div class="slider-layout">
+    <figure class="slider active">
+      <img class="slider-picture" id="picture" src="images/1.jpg" alt="">
+      <figcaption class="slider-legend" id="figcaption">Graffiti par Joenomias</figcaption>
+    </figure>
+  </div>
+  <div id="dot-style">
+
+  </div>
+</main>
+  <script src="js/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+main{
+ margin: 0 auto;
+}
+
+em{
+  color : red;
+  font-weight: bold, italic;
+}
+
+.selected{
+ background-color: forestgreen !important;
+}
+
+
+#photolist{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 1em;
+  padding: 0.5em;
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+li{
+  flex-basis: 20%;
+  padding-bottom: 2rem;
+}
+
+.silver{
+background-color: silver;
+}

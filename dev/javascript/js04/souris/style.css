@@ -16,11 +16,11 @@
   transition-duration: 1s;
 }
 
-#good:hover{
-    background-color: limegreen;
+.good{
+    background-color: limegreen !important;
 }
 
 
-#important:hover{
-  background-color: firebrick;
+.important{
+  background-color: firebrick !important;
 }

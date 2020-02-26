@@ -28,17 +28,25 @@ toggle.addEventListener("click", () => {
 });
 
 //Quand la souris se déplace à l'intérieur du rectangle il devient rouge; il reprend sa couleur originale quand la souris n'est plus dedans.
-
+/*
 rectangle.addEventListener("mouseenter", () => {
   rectangle.style.backgroundColor = "red";
 });
-
+*/
+rectangle.addEventListener("mouseenter", () => {
+  rectangle.classList.add("important");
+});
+/*
 rectangle.addEventListener("mouseout", () => {
   rectangle.style.backgroundColor = "";
+});
+*/
+rectangle.addEventListener("mouseout", () => {
+  rectangle.classList.remove("important");
 });
 
 //  Quand on double-clique sur le rectangle il devient vert.
 
 rectangle.addEventListener("dblclick", () => {
-   rectangle.style.backgroundColor = "green";
+   rectangle.classList.add("good");
 });
