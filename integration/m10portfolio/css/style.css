@@ -169,7 +169,7 @@ figure {
 
   }
 
-figure i:hover{
+figure:hover{
   /*animation: bounce 0.5s ease infinite alternate;*/
   animation: bounce;
   animation-duration: 0.5s;

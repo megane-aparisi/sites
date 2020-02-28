@@ -1,0 +1,123 @@
+ctrl + alt + t = le terminal s'affiche 
+
+pwd = print working directory - taper cette commande permet de nous retrouver
+
+ls = list 
+
+ls -al = utilisateur/groupe/taille de ficher/date 
+cd sites = ("sites" est mon nom de fichier)
+
+mkdir + nomquejeveux = make directory, me créer un fichier
+
+cd .. = les deux points font un retour
+
+touch = créer un fichier 
+
+Déclarer mon JS source
+
+<script src="indec.js"></script>
+
+
+git init = rajouter un new repository 
+git -h = verifier que j'ai le logiciel
+git add. = ajoute tout mes dossier dans le repository
+
+tous les soirs : 
+cd sites
+git add .
+git commit -m 
+git  push
+
+pour acceder au log : sudo tail -f /var/log/apache2/access.log
+-----------------------------------------------
+linux : (= langage bash )
+
+
+
+echo $shell (cest une var d'environnement - permet de connaitre le langage : bash/ SH / CSH / fish etc)
+/bin/bash  (le premier / signifie qu'on est a la racine du systeme d'exploitation)
+echo user (notre nom d'utilisateur)
+echo host (notre nom d'ordinateur - souvent on donne le meme nom que notre nom de domaine)
+si y a pas de nom alors : 
+nano /etc/hostname (pour quitter la fenetre ctrl + x)
+nano /etc/hosts (ca sert a afficher localhost)
+
+si je veux que l'ordi reponde a un autre nom de domaine, je retape dans la fenetre l'adresse ip puis le nom terminator.fr (exemple ci dessous)
+
+127.0.0.1       localhost
+127.0.0.1       terminator.fr
+127.0.1.1       waa2
+
+/etc/apache2/apache2.conf
+Timeout 300 
+KeepAlive On
+
+nano /etc/apache2/sites-available/000-default.conf
+
+<VirtualHost slider.test:80> (a la place de l'étoile e mets mon nom de site)
+        # The ServerName directive sets the request scheme, hostname and port t$
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+        # match this virtual host. For the default virtual host (this file) this
+        # value is not decisive as it is used as a last resort host regardless.
+        # However, you must set it for any further virtual host explicitly.
+        #ServerName slider.test.com
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /home/megane/public_html/js/caroussel
+
+    <Directory /home/waa2/sites>
+        AllowOverride all
+        Require all granted
+        Options +Indexes
+    </Directory>
+
+pour publier un site en externe
+Exercice de publication de site à new york: 
+~$ ssh root@159.89.49.150 (ip de mon client)
+yes
+je rentre le password
+apt install apache2
+Y
+apt install php7.2 mysql-server
+(si l'installation de php sql ne fonctionne pas :
+apt-get-update
+apt-get-upgrade)
+apt install php 
+yes
+apt install mysql-server
+yes
+ls
+cd /
+ls (pour voir mon navigateur)
+apt install nano (editeur de texte)
+cd /etc/apache2/sites-available/000-default.conf
+exit
+scp -r /home/waa2/sites/dev/php/loterie/* waa13@159.89.49.150:/var/www/html
+
+
+
+cd /var/www/html/
+ls
+waa2@waa2:~/sites$ cd /var/www/html/
+waa2@waa2:/var/www/html$ ls
+index.html  info.php
+waa2@waa2:/var/www/html$ 
+
+cd /home/waa2/sites/
+commande cp = copier
+sudo cp - r /chemindemondossieracopier (cd /home/waa2/sites/dev/php/loterie)
+cd /home/waa2/sites/dev/php/loterie/* --> comme ca je copie le dossier
+cd /home/waa2/sites/dev/php/loterie --> comme ca je copie les fichiers
+
+waa2@waa2:/var/www/html$ sudo cp -r /home/waa2/sites/dev/php/loterie/* /var/www/html/
+ci-dessus : JE copie/colle
+
+
+waa2@waa2:~$ scp -r /home/waa2/sites/dev/php/loterie/ waa13@192.168.0.22:~/
+ci-dessus : JE copie/colle vers une adresse ip
+
+pour telecharger un dossier depuis un autre ordinateur 
+
+waa2@waa2:~$ scp -r waa6@192.168.0.23:~/sites  /home/waa2/Téléchargements/ 

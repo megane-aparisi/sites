@@ -72,6 +72,7 @@ select name from products where name like 'pro%' (si ce que je cherche commence 
 SELECT NOW() --> Permet d'afficher le jour et la date à l'heure précise
 
 Exercice BDD : 
+Le total du stock et le total de la valeur du stock à la vente de chaque ligne de produit pour les produits vendus plus de 100$ trié par total de la valeur du stock à la vente
 
 1. SELECT addressLine1, addressLine2, city, state, country FROM `offices` ORDER BY country, state DESC
 2. SELECT productName, productCode FROM products WHERE productLine = 'planes' ORDER BY productVendor, quantityInStock DESC
@@ -83,3 +84,23 @@ Exercice BDD :
 8. SELECT productName, MSRP*quantityInStock AS stock_value FROM `products` WHERE productName like '196%'
 9. SELECT productVendor, ROUND(AVG(MSRP)) FROM products GROUP BY productVendor ORDER BY AVG(MSRP)
 10. SELECT productLine, COUNT(productName) FROM products GROUP BY productLine
+11.
+12. SELECT productVendor, MAX(quantityInStock) FROM products GROUP BY productVendor ORDER BY productVendor
+13. SELECT MIN(buyPrice) FROM products WHERE `productLine` = 'planes'
+14.SELECT customerNumber, SUM(amount) FROM payments GROUP BY  customerNumber HAVING SUM(amount)>20000
+15. SELECT lastName, firstName, jobTitle, employees.officeCode, offices.city, offices.addressLine1 FROM employees JOIN offices ON employees.officeCode = offices.officeCode
+
+16. SELECT customerName, contactLastName, contactFirstName, country, customers.salesRepEmployeeNumber, employees.lastName, employees.firstName 
+FROM customers 
+JOIN employees 
+ON customers.salesRepEmployeeNumber = employees.employeeNumber
+WHERE (country = 'France') OR (country ='USA') 
+ORDER BY employees.lastName, employees.firstName
+
+17.SELECT orderNumber, orderdetails.productCode, products.productName, products.productLine, (products.MSRP-orderdetails.priceEach) AS discount
+FROM orderdetails 
+JOIN products 
+ON orderdetails.productCode = products.productCode
+ORDER BY orderdetails.orderNumber, discount
+
+

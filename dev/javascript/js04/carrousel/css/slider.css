@@ -59,6 +59,20 @@ footer > * {
 }
 
 
+.bounce {
+  /*animation: bounce 0.5s ease infinite alternate;*/
+  animation: bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-20px);}
+}
+
+
 
 /* ******************************************************* */
 /* ************** Les éléments du caroussel ************** */
@@ -78,7 +92,7 @@ footer > * {
 
 #toolbar{
 text-align: center;
-padding-bottom: 3rem;
+padding-bottom: 1.5rem;
 }
 
 .slider-layout {
@@ -115,102 +129,6 @@ padding-bottom: 3rem;
   font-weight : bold;
 }
 
-.next, .prev {
-  display: inline-block;
-  width : 2em;
-  height : 2em;
-  line-height : 2em;
-  position : absolute;
-  top : 50%;
-  transform : translateY(-50%);
-	text-align: center;
-  font-size : 3em;
-  color : white;
-}
-
-.next:hover,
-.prev:hover {
-  background-color : rgba(255,255,255,0.5);
-  color : #dd5735;
-  text-decoration: none;
-}
-
-.prev {
-  left : 0;
-}
-
-.next {
-  right : 0;
-}
-
-/* ETAPE 3 : PAGINATION */
-
-.slider-pagination {
-  position : absolute;
-  z-index : 200;
-  bottom : 1rem; left : 0; right : 0;
-  margin : 0;
-  padding : 0;
-  list-style : none;
-  text-align : center;
-}
-
-.slider-pagination li {
-  display : inline-block;
-  width : 20px;
-  height : 20px;
-  margin : 0.5rem;
-  padding : 0;
-  background-color : white;
-  border : 2px solid  white;
-  box-shadow : 5px 5px 10px rgba(0,0,0,0.8);
-  border-radius : 50%;
-  cursor : pointer;
-  cursor : zoom-in;
-}
-
-
-.slider-pagination li:hover {
-  background-color : #dd5735;
-  border-color : #dd5735;
-}
-
-.slider-pagination li.selected {
-  background-color : #dd5735;
-}
-
-
-/* ETAPE 4 : MINIATURES */
-
-.slider-thumbnails {
-  padding : 0;
-	text-align: center;
-}
-
-.item-thumbnail {
-  display : inline-block;
-  width : 80px;
-  height : 80px;
-  margin : 5px;
-  border : 5px solid rgba(255,255,255,0.6);
-  border-radius : 5px;
-  overflow: hidden;
-  cursor : pointer;
-  cursor : zoom-in;
-}
-
-.thumbnail {
-  height : 100%;
-  max-width : max-content;
-  filter : grayscale(80%);
-  opacity : 0.5;
-}
-
-.thumbnail:hover,
-.thumbnail.selected {
-  filter : grayscale(0);
-  opacity : 1;
-}
 
 /* The dots/bullets/indicators */
 

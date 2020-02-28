@@ -17,15 +17,22 @@ let prev = document.getElementById('slider-previous');
 let random = document.getElementById('slider-random');
 let img = document.getElementById('picture');
 let figcaption = document.getElementById('figcaption');
+let figure = document.getElementById('figure');
 
-let dot = document.getElementsByClassName("dot");
-let dotStyle = document.getElementById("dot-style");
+let dot = document.getElementsByClassName('dot');
+let dotStyle = document.getElementById('dot-style');
+let dotList = document.querySelectorAll('#dot-style span');
+
+function getSpans(){
+ return document.querySelectorAll('#dot-style span');
+}
 
 function addDot() {
-  let dot = document.createElement("span");
-  dot.classList.add("dot");
+  let dot = document.createElement('span');
+  dot.classList.add('dot');
   dotStyle.append(dot);
 }
+
 
 let my_pictures = [
   {
@@ -87,18 +94,58 @@ function addEventListenerToToggle() {
 
 
 /*************PLAY************/
-let i = 0;
+let indexPhoto = 0;
+let dotsIndex = indexPhoto;
 let intervalID = '';
-function play_image_change_next() {
-  i++;
-  img.src = my_pictures[i].src;
-  figcaption.innerText = my_pictures[i].legend;
-  if (i >= my_pictures.length -1) {
-    i = 0;
+
+
+
+
+function dot_link() {
+  const spans = dotStyle.querySelectorAll('span');
+  for (dotsIndex = 0; dotsIndex < spans.length; dotsIndex++) {
+    spans[dotsIndex].classList.remove('active');
+    if (indexPhoto == dotsIndex) {
+      spans[indexPhoto].classList.add('active');
+    }
   }
 }
 
-function addEventListenerToPlay() {
+
+
+function slide_initial(){
+  img.src = my_pictures[indexPhoto].src;
+  figcaption.innerText = my_pictures[indexPhoto].legend;
+  dot_link();
+}
+
+function play_image_change_next() {
+  indexPhoto++;
+  if (indexPhoto >= my_pictures.length) {
+    indexPhoto = 0;
+  }
+  img.src = my_pictures[indexPhoto].src;
+  figcaption.innerText = my_pictures[indexPhoto].legend;
+  dot_link();
+}
+
+/*CLIQUE SUR PUCE*/
+
+function addEventListenerToDot(){
+
+  let allSpan = getSpans();
+  allSpan.forEach(function(span, index){
+    span.addEventListener('click', function() {
+      img.src = my_pictures[index].src;
+      figcaption.innerText = my_pictures[index].legend;
+      indexPhoto = index;
+      dot_link();
+    });
+  });
+}
+
+
+function addEventListenerToPlay(speed) {
   play.addEventListener('click', () => {
     const icon = play.querySelector('i');
 
@@ -110,30 +157,37 @@ function addEventListenerToPlay() {
       return clearInterval(intervalID);
     }
 
-    intervalID = setInterval( () => play_image_change_next(), 2000);
+    intervalID = setInterval( () => play_image_change_next(), speed);
   });
 }
 /*************NEXT************/
+function bounce(){
+  figure.classList.add('bounce');
+}
+
 
 function addEventListenerToNext() {
   next.addEventListener('click', () => {
     play_image_change_next();
+    bounce()
   });
+
 }
 
 /*************PREV************/
 function play_image_change_prev() {
-  if (i<=0) {
-   i = my_pictures.length -1;
+  if (indexPhoto <= 0) {
+   indexPhoto = my_pictures.length;
   }
-    i--;
-    img.src = my_pictures[i].src;
-    figcaption.innerText = my_pictures[i].legend;
+
+  indexPhoto--;
+  img.src = my_pictures[indexPhoto].src;
+  figcaption.innerText = my_pictures[indexPhoto].legend;
+  dot_link();
 }
 
 function addEventListenerToPrev() {
-  prev.addEventListener('click', () => {
-
+    prev.addEventListener('click', () => {
     play_image_change_prev();
   });
 }
@@ -156,21 +210,18 @@ function addEventListenerToRandom() {
   });
 }
 
-
-/*************Lier les cerlces aux images************/
-
-
-
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
-document.addEventListener('DOMContentLoaded', () => {
-  addEventListenerToPlay();
-  addEventListenerToToggle();
-  addEventListenerToNext();
-  addEventListenerToPrev();
-  addEventListenerToRandom();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   addEventListenerToDot();
+//   slide_initial();
+//   addEventListenerToPlay();
+//   addEventListenerToToggle();
+//   addEventListenerToNext();
+//   addEventListenerToPrev();
+//   addEventListenerToRandom();
+// });
 
 document.addEventListener('keydown', function(e){
     if(e.keyCode === 37){
@@ -180,3 +231,26 @@ document.addEventListener('keydown', function(e){
         play_image_change_next();
     }
 });
+
+
+
+ // On peut mettre le DOMcontentLoaded en fonction :
+
+function startSlider(options){
+  document.addEventListener('DOMContentLoaded', () => {
+    addEventListenerToDot();
+    slide_initial();
+    addEventListenerToPlay(options.speed);
+    addEventListenerToToggle();
+    addEventListenerToNext();
+    addEventListenerToPrev();
+    addEventListenerToRandom();
+  });
+}
+
+// Puis lui attribuer des options de la sorte :
+
+startSlider({
+ speed: 2000,
+ fullscreen: true,
+})
