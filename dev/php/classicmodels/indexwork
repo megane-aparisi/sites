@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les commandes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <table>
+      <caption>Liste des commandes</caption>
+      <thead>
+        <tr> <!-- tr = ligne  -->
+          <th>Voir détail de la commande</th>
+          <th>Numéro de la commande</th>  <!-- td = Colonne  -->
+          <th>Date de commande</th> <!-- th = en tête  -->
+          <th>Date de livraison</th>
+          <th>Statut de la commande</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php include('views/orders/view_orderslist.php'); ?>
+      </tbody>
+    </table>
+</body>
+</html>
+

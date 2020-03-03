@@ -1,0 +1,172 @@
+body {
+  width : 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: verdana, sans-serif;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'Muli';
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+}
+
+h1 {
+  width: 50%;
+  color: #260000;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  background-color: rgba(241, 177, 201, 0.4);
+  border-radius: 50%;
+  font-family: 'The Girl Next Door';
+  font-size: 4rem;
+}
+
+
+h2 {
+  width: 50%;
+  color: #260000;
+  font-size: 2rem;
+  flex-basis: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: 'The Girl Next Door';
+}
+
+
+fieldset{
+  width: 60%;
+  margin: auto;
+  text-align:center;
+  border: none;
+}
+
+textarea {
+  padding: 2rem;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(241, 177, 201, 1);
+}
+
+ul{
+  width: 40%;
+  flex-direction: row;
+  background-color: white;
+  color: #260000;
+  padding: 1rem;
+  border-radius: 30px;
+  border-color: rgba(241, 177, 201, 0.4);
+  border-style: solid;
+  list-style:none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+li{
+  margin-left : 1rem;
+}
+
+.btn_tache{
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  border-bottom-style: solid;
+
+}
+
+.bloc_description1{
+  margin-bottom: 1rem;
+}
+
+.bloc_description{
+  border-radius: 30px;
+  border-color: rgba(241, 177, 201, 0.4);
+  border-style: solid;
+}
+
+.bloc_date{
+  border-style: none;
+}
+
+.bloc_choices{
+  border-radius: 30px;
+  border-color: rgba(241, 177, 201, 0.4);
+  border-style: solid;
+  background-color: white;
+}
+
+.bloc_delete{
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  border-bottom-style: solid;
+}
+
+.liste{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.updatelist{
+  margin: auto;
+}
+
+.field_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.field_description{
+  display: flex;
+  flex-direction: column;
+}
+
+.field_priority{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.form_btn{
+  text-align: center;
+}
+
+.send_btn{
+ background-color: #f9b8a2;
+ color: white;
+ padding: 1rem 5rem;
+ border-radius: 30px;
+ border: none;
+ font-family: 'Muli';
+ font-size: 1rem;
+}
+
+.reset_btn{
+ background-color: #bfb6b1;
+ color: white;
+padding: 1rem 5rem;
+border-radius: 30px;
+border: none;
+font-family: 'Muli';
+font-size: 1rem;
+}
