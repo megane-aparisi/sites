@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Votre carnet d'adresse !</title>
+    <meta name="description" content="Un carnet d'adresses en ligne !">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet" >
+    <link href="css/normalize.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
+  </head>
+  <body>
+    <main>
+        <h1 class="deco_h1">Votre carnet d'adresse en ligne !</h1>
+        <a href="#toolbar" id="toolbartoggle"><i class="fas fa-plus-square"></i>Carnet d'adresse</a>
+        <form id="toolbar">
+          <fieldset>
+            <div class="form_ans">
+              <p>
+              <label for="firstname">Prénom :</label>
+              <input type="text" id="firstname" name="user_firstname" placeholder="Prenom">
+              </p>
+              <p>
+              <label for="lastname">Nom :</label>
+              <input type="text" id="lastname" name="user_lastname" placeholder="Nom">
+              </p>
+              <p>
+              <label for="adress">Adresse :</label>
+              <input type="text" id="adress" name="user_adress" placeholder="Adresse">
+              </p>
+              <p>
+              <label for="codepostal">Code Postal :</label>
+              <input type="text" id="codepostal" name="user_cp" placeholder="Code postal">
+              </p>
+              <p>
+              <label for="number">Numéro de téléphone :</label>
+              <input type="text" id="number" name="user_number" placeholder="06 00 00 00 00">
+              </p>
+              <p>
+              <label for="email">Mail :</label>
+              <input type="email" id="email" name="user_email" placeholder="nom@domaine.fr">
+              </p>
+            </div>
+          </fieldset>
+          <p class="form_btn">
+          <button class="send_btn" type="submit" name="button">Valider</button>
+          <button class="reset_btn" type="reset">Effacer</button>
+          </p>
+        </form>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.js"> </script>
+    <script src="json.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ila Yoga - Contactez-nous !</title>
+    <meta name="description" content="Ila Yoga - Page de contact - Cours de Yoga sur Paris et Marseille">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Playfair+Display&display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet" >
+    <link href="css/normalize.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a>
+        <a href="#"><i class="fas fa-calendar" aria-hidden="true"></i>Agenda</a>
+        <a href="#"><i class="fas fa-book" aria-hidden="true"></i>Livre d'or</a>
+        <a href="#"><i class="fas fa-image" aria-hidden="true"></i>Album Photo</a>
+        <a class="active_page" href="./contact.html"><i class="far fa-envelope" aria-hidden="true"></i>Nous contacter</a>
+      </nav>
+      <p><strong>OFFRE PROMO : Votre premier cours d'essai gratuit !</strong></p>
+      <h1>Bienvenue sur le site d'Ila Yoga</h1>
+    </header>
+    <main>
+        <h2 class="deco_h2">Réservez votre place pour le prochain cours de Yoga du rire !</h2>
+        <table>
+          <caption>Yoga du rire avec Jacqueline (Paris)</caption>
+          <thead>
+            <tr> <!-- tr = ligne  -->
+              <th>Date</th>  <!-- td = Colonne  -->
+              <th>Horaire</th> <!-- th = en tête  -->
+              <th>Reserver</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05 Janvier 2016</td>
+              <td>15h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>10 Janvier 2016</td>
+              <td>16h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>15 Janvier 2016</td>
+              <td>15h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>20 Janvier 2016</td>
+              <td>16h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>18 Février 2016</td>
+              <td colspan="2">Horaire à venir</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption>Yoga du rire avec Roger (Marseille)</caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Horaire</th>
+              <th>Reserver</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05 Janvier 2016</td>
+              <td>15h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>10 Janvier 2016</td>
+              <td>16h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>15 Janvier 2016</td>
+              <td>15h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td>20 Janvier 2016</td>
+              <td>16h30</td>
+              <td>Réserver ce créneau</td>
+            </tr>
+            <tr>
+              <td colspan="3" >Autres dates à venir</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="deco_h2">Pour valider votre réservation, compléter ce formulaire :</h2>
+        <form method="get" action="contact.html"><!--2 methodes : method=GET qui passe par l'URL ou method=POST qui envoi les données. Un deuxième attribut de form est Action-->
+          <fieldset>
+            <legend>Vos coordonnées</legend>
+            <div class="form_ans">
+              <p>
+              <label for="firstname">Votre prénom</label>
+              <input type="text" id="firstname" name="user_firstname" required="required">
+              </p>
+              <p>
+              <label for="lastname">Votre nom</label>
+              <input type="text" id="lastname" name="user_lastname" required="required">
+              </p>
+              <p>
+              <label for="email">Votre email</label>
+              <input type="email" id="email" name="user_email" placeholder="nom@domaine" required="required">
+              </p>
+            </div>
+          </fieldset>
+          <p class="form_btn">
+          <button class="send_btn" type="submit" name="button">Envoyer</button>
+          <button class="reset_btn" type="reset">Effacer</button>
+          <!--OU <input type="submit" value="Poster">-->
+          <!--On a aussi un "button type="reset" value="effacer" <input type="reset" value="Effacer">/ VALUE = Valeur par défaut-->
+            <!--Check box = choix multiple et radio=choix unique-->
+          </p>
+        </form>
+
+    </main>
+    <footer>
+      <img src="img/logo.gif" alt="logo 3WA" width="50">
+      <p><small>Cet exercice de <span>3W Academy</span> est mis à disposition <span >pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</span>.<br>
+      Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa?fr"> contact@3wa.fr</a>.<br> Les maquettes ont été réalisées par <span class="blue">Justine Muller</span>.</small></p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.js"> </script>
+    <script src="json.js"> </script>
+  </body>
+</html>

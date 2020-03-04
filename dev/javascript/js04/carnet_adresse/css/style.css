@@ -1,0 +1,134 @@
+
+header {
+  text-align: center;
+}
+
+body{
+  background-image: url(../img/notebook.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:active {
+  color: red;
+}
+
+
+form{
+  font-family: 'Source Code Pro', monospace;
+}
+
+p {
+  font-family: 'Source Code Pro', monospace;
+}
+
+#toolbartoggle{
+  margin-left: 15rem;
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: orange;
+  padding: 1rem;
+  border-radius: 5px;
+
+}
+
+main{
+  width: 50%;
+  margin: auto;
+  margin-top: 17rem;
+  transform: rotate(-6deg);
+
+}
+
+h1{
+  margin-left: 15rem;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+fieldset {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: none;
+}
+
+fieldset p {
+  display: inline-block;
+  text-align: left;
+}
+
+
+
+input {
+  background-color: #e0e0e0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px #000;
+}
+/*
+legend {
+  margin-left: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+}
+*/
+
+i{
+  padding-right: 1rem;
+}
+
+.send_btn {
+  border-radius: 5px;
+  padding: 1em;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  box-shadow: -10px 5px 5px grey;
+}
+
+.reset_btn {
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #aaaaaa;
+  color: white;
+  font-weight: bold;
+  box-shadow: -10px 5px 5px grey;
+}
+
+.form_btn {
+  text-align: center;
+}
+
+.deco_h1 {
+  margin-top: 2em;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  color: orange;
+}
+
+.form_ans {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Je peux cibler directement un attribut au lieu de faire une classe. Exemple : [type=submit] {} (ceci est un selecteur d'attribut)*/
