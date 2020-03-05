@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/*couleur vert foncé #879e0f*/
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; /*62.5% de 16 ca fait 10px ; 1rem=10px*/
@@ -61,6 +63,10 @@ a{
   text-decoration: none;
 }
 
+.a_footer{
+  text-decoration: none;
+  color: white;
+}
 
 a:hover,
 a:focus,
@@ -144,11 +150,63 @@ h3{
 
 footer{
 text-align: center;
+margin-top: 2rem;
+}
+
+.services{
+  background-color: #879e0f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 0;
 }
 
 
+.services article{
+  background-color: #879e0f;
+  padding-top: 1rem;
+  color: white;
+  width: 50%;
+  margin: auto;
+}
+
+.services_footer{
+background-color: #96b011;
+color: white;
+}
+
+.services_footer p{
+font-weight: bold;
+margin-top: 0;
+padding-top: 1.5rem;
+}
+
+.footer_nav1, .footer_nav2, .footer_nav3{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.footer_nav3{
+  padding-bottom: 2rem;
+}
 
 
+.footer_down{
+  background-color: #879e0f;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+  color: white;
+  margin: auto;
+}
+
+.footer_down img{
+  display: inline;
+  margin: auto;
+  padding-top: 2rem;
+}
 
 @media screen and (min-width : 1024px) {
   header{
@@ -271,6 +329,20 @@ text-align: center;
   .selection_products{
     display: flex;
     flex-direction: row;
+  }
+
+  .services{
+    flex-wrap: nowrap;
+  }
+
+  .services_footer{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  }
+  .bloc_services{
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
