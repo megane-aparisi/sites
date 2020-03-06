@@ -1,0 +1,342 @@
+/*
+  COULEURS:
+
+  Texte : #34495e
+  Lien : #8a62c2
+  fond section : #8a62c2
+*/
+
+body {
+	font-family: "Playfair Display", serif;
+	font-size: 1em;
+	color: #34495e;
+	line-height: 1.8;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+nav a:link {
+	color: #8a62c2;
+}
+
+nav a:visited {
+	color: rgba(167, 95, 185,0.2);
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: "Kaushan Script";
+	font-weight: normal;
+	text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+h2 {
+	font-size : 2em;
+}
+
+h3 {
+	font-size : 1.8em;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: #eacee4;
+	margin: 4em 10%;
+}
+
+iframe {
+  width : 100%;
+  border : 1px solid #ccc;
+  vertical-align : top;
+}
+
+footer {
+  padding : 2em;
+  font-size : 0.85em;
+  text-align : center;
+}
+
+footer img {
+  width : 50px;
+  height : auto;
+}
+
+/* ---------------------------------------------
+                    HEADER
+-----------------------------------------------*/
+
+header {
+   /*viewport Height = % / hauteur de la fenêtre */
+  height : 60vh; /* 60% de la hauteur de la fenêtre */
+	background-color : #8a62c2;
+	background-image: url(../img/fond.jpg);
+	/* Voir : https://developer.mozilla.org/fr/docs/Web/CSS/background-size */
+	background-size: cover;
+	/* Voir : https://developer.mozilla.org/fr/docs/Web/CSS/background-position */
+	background-position: center;
+  background-repeat : no-repeat;
+  text-align : center;
+  color : white;
+}
+
+/* NAV */
+nav {
+	padding: 2em;
+  background-color : rgb(255,255,255);
+  background-color: rgba(255,255,255,0.3);
+}
+
+nav a {
+  /* Les liens vont inclure des boites (voir plus bas):
+  il faut donc leur donner un comportement de boite , sinon ils sont entrainés par les blocs à l'intérieur
+  inline-block : pour qu'ils restent côte à côte
+  */
+  display: inline-block;
+  margin : 0 2em;
+	font-size: 1.5em;
+	vertical-align: middle;
+	font-family: "Kaushan Script";
+}
+
+nav a:link,
+nav a:visited {
+	color: white;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+	color: #8a62c2;
+	text-decoration: none;
+}
+
+/* Provoquer le retour à la ligne à la fermeture de la balise i insérant les icones
+IL faudra cibler la classe et non le sélecteur de  balise i -> force et priorité des sélecteurs
+
+  fontAwesome applique un display : inline-block sur les classes : si on applique un display block sur i, notre règle n'a pas la priorité (voir l'inspecteur de code)
+*/
+nav a .fa {
+	display: block;
+}
+
+.banner-promo {
+  margin : 0;
+  background-color : rgba(138, 98, 194,0.15);
+  font-size: 1.2em;
+}
+
+.banner-promo span {
+  text-transform : uppercase;
+}
+
+/* ---------------------------------------------
+                    MAIN
+-----------------------------------------------*/
+main {
+	padding-top : 4em;
+}
+
+.main-article {
+  padding : 0 10%;
+  overflow : hidden;
+  /*background : #ccc;*/
+}
+
+.main-article img {
+  width : 30%;
+}
+
+.fleft {
+  float : left;
+  margin-right : 2em;
+}
+
+.fright {
+  float : right;
+  margin-left : 2em;
+}
+
+.main-section {
+  margin-top : 4em;
+  padding : 2em 5%;
+  background : #8a62c2 url(../img/background_section.jpg) center/cover;
+  color : #fff;
+}
+
+.main-section article {
+  display : inline-block;
+  width : 23.33%;
+  width : calc(100% / 3 - 10%);
+	margin : 0 5%;
+  text-align : center;
+  vertical-align : top;
+}
+
+/* ---------------------------------------------
+                    FOOTER
+-----------------------------------------------*/
+
+footer {
+  background : #8a62c2 url(../img/background_section.jpg) center/cover;
+  color : #fff;
+}
+
+
+/* ---------------------------------------------
+                    TABLEAUX
+-----------------------------------------------*/
+
+table {
+	width : 90%;
+	margin : 4em auto;
+	border-collapse : collapse;
+}
+
+caption {
+	padding: 0.6em;
+	background-color: #C4A9DF;
+	text-align : left;
+	font-family: "Kaushan Script";
+	font-weight: normal;
+	font-size: 1.6em;
+	color: white;
+}
+
+/* Alterner la couleur de fond des lignes */
+tbody tr:nth-child(odd) {
+	background-color: #FAFAFA;
+}
+
+tbody tr:nth-child(even), thead tr {
+	background-color: #f2f2f2;
+}
+
+th, td {
+	padding: 0.6em;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+td:first-child,
+th:first-child {
+	text-align : left;
+}
+
+td:last-child {
+	text-align : center;
+}
+
+tfoot th:first-child {
+	background-color: #C4A9DF;
+	border: 1px solid #ccc;
+	text-align: right;
+	color: white;
+}
+
+tfoot td:last-child {
+	text-align: left;
+	font-weight: bold;
+}
+
+
+
+/* ---------------------------------------------
+                    FORMULAIRE
+-----------------------------------------------*/
+
+form {
+	text-align : center;
+}
+
+fieldset {
+	margin : 4em 5%;
+	padding : 0 5%;
+	border : 1px solid #ccc;
+}
+
+legend {
+	font-size : 1.6em;
+}
+
+label {
+	cursor : pointer;
+}
+
+.field {
+	display : inline-block;
+}
+
+.select {
+	display : block;
+}
+
+[type=text],
+[type=email],
+select {
+	padding : 0.6em;
+}
+
+[type=text],
+[type=email] {
+	border : none;
+	border-bottom : 1px solid #ccc;
+	background : transparent;
+}
+
+[type=text]:focus,
+[type=email]:focus {
+	background : #8a62c2;
+	outline : black auto 1px;
+}
+
+[type=submit],
+[type=reset] {
+	padding : 0.5em;
+	background-color : #8a62c2;
+	border : none;
+	color : white;
+}
+
+[type=reset] {
+	background-color : #aaa;
+}
+
+select {
+	width : 100%;
+	background : transparent;
+}
+
+
+/* http://blog.bruyere-freelance.fr/styliser-checkbox-css-proprement/ */
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+input[type=checkbox] {
+    -border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 1px solid #8a62c2;
+}
+
+input[type="checkbox"]:checked {
+  background : #8a62c2;
+}

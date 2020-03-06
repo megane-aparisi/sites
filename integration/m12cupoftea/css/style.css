@@ -111,6 +111,7 @@ h1{
 
 h2{
   background-color: white;
+  padding-top: 1.5rem;
   margin-bottom: 0;
   color: #96b011;
 }
@@ -125,12 +126,14 @@ h3{
 
 .selection_products p{
   color: #666666;
+  margin-bottom: 0;
 }
 
 
 .prix{
   font-weight: bold;
   font-size: 25px;
+  margin-top: 0;
 }
 
 
@@ -236,13 +239,14 @@ padding-top: 1.5rem;
 
   .corner_picture{
     visibility: visible;
+    width: 8%;
     float: right;
     margin-top: -2%;
   }
   .panier{
     display: flex;
     flex-direction: row;
-    margin-top: 4rem;;
+    margin-top: 4rem;
     margin-left: 80%;
     margin-bottom: -5rem;
   }
@@ -273,18 +277,7 @@ padding-top: 1.5rem;
     margin-bottom: 6rem;
   }
   /************SLIDER**************/
-  .bounce {
-    /*animation: bounce 0.5s ease infinite alternate;*/
-    animation: bounce;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
 
-  @keyframes bounce {
-    0% {transform: translateY(0);}
-    100% {transform: translateY(-20px);}
-  }
 
   .slider-layout {
     display: inline;
@@ -298,9 +291,9 @@ padding-top: 1.5rem;
 
   .slider.active {
     display: block;
+    background-color: inherit;
+
   }
-
-
 
   #dot-style{
     text-align: center;
@@ -320,15 +313,18 @@ padding-top: 1.5rem;
   .active, .dot:hover {
     background-color: #717171;
   }
-
+  /**************************/
   .products{
     flex-wrap: nowrap;
 
   }
-  /**************************************/
+
   .selection_products{
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
   }
 
   .services{
@@ -343,6 +339,58 @@ padding-top: 1.5rem;
   .bloc_services{
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /**********LISTING****************/
+.header_selection_products{
+  background-color: white;
+}
+
+  .product_description{
+    display: inline;
+    background-color: white;
+    text-align: left;
+  }
+
+  .product_description p{
+    padding-right: 1rem;
+    color: #666666;
+  }
+
+  .img_product_description{
+    float: left;
+    margin: 2rem;
+  }
+
+  .product_description h1{
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  /**********FICHE PRODUIT****************/
+.main_fp{
+  background-color: white;
+  text-align: left;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.all_sections{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: white;
+}
+
+  .leftItems{
+    width: 40%;
+    margin: auto;
+    text-align: left;
+  }
+  .rightItems{
+    width: 40%;
+    margin: auto;
   }
 }
 

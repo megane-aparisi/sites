@@ -1,16 +1,19 @@
 $contacts = [];
 $contactList = $('.contactLists');
+$form = $("form");
 
 $('#toolbartoggle').click(function(e){
   e.preventDefault();
   $('#toolbar').fadeToggle('fast');
 });
 
-$("form").submit(function(e){
+$form.submit(function(e){
   e.preventDefault();
+
+
   $newcontact = {
     "firstname": $('#firstname').val(),
-    "lastname": $('#lasttname').val(),
+    "lastname": $('#lastname').val(),
     "adress": $('#adress').val(),
     "codepostal": $('#codepostal').val(),
     "number": $('#number').val(),
@@ -18,14 +21,20 @@ $("form").submit(function(e){
   };
 
 
-
   if(getContacts()) {
     $contacts = getContacts();
   }
 
-  $contacts.push($newcontact);
+  console.log($formEditState);
 
-  localStorage.setItem('contact', JSON.stringify($contacts));
+  if (!$formEditState) {
+    $contacts.push($newcontact);
+
+    localStorage.setItem('contact', JSON.stringify($contacts));
+  } else {
+    persistEditContact($newcontact);
+  }
+
 
 
   showUl($newcontact, $contacts.length - 1);
@@ -44,7 +53,7 @@ function showHtml(contact, index) {
       <li>${contact.codepostal}</li>
       <li>${contact.number}</li>
       <li>${contact.email}</li>
-      <li><button data-contact=${index}>Editer</button></li>
+      <li><button class="editBtn" data-contact=${index}>Editer</button></li>
       <li><button class="reset_btn" data-contact=${index}>Supprimer</button></li>
     </ul>
   `;
@@ -68,6 +77,8 @@ function showUl($contact, index) {
   ul.innerHTML = showHtml($contact, index);
 
   $contactList.append(ul);
+  deleteContact();
+  editerContact();
 }
 
 function getLocalStorage() {
@@ -75,20 +86,73 @@ function getLocalStorage() {
 }
 
 /*SUPPRIMER MON CONTACT*/
-function deleteContact(){
+// function deleteContact(){
+//   let supprimer = Array.from(document.getElementsByClassName('reset_btn'));
+//   supprimer.forEach(function(button){
+//     button.addEventListener('click', function(){
+//       $index = $(button).data('contact');
+//       $contacts = getLocalStorage();
+//       $contacts.splice($index, 1);
+//       localStorage.setItem('contact', JSON.stringify($contacts));
+//       showUl($contact, index).remove();
+//     });
+//   });
+// }
+
+function deleteContact() {
   let supprimer = Array.from(document.getElementsByClassName('reset_btn'));
-  supprimer.forEach(function(button){
+  supprimer.forEach(function(button) {
     button.addEventListener('click', function(){
-      $index = $(button).data('contact');
+      $index = $(this).data('contact');
       $contacts = getLocalStorage();
       $contacts.splice($index, 1);
       localStorage.setItem('contact', JSON.stringify($contacts));
+      $(this).parent().parent().remove();
     });
   });
 }
 
+function editerContact() {
+  let editer = Array.from(document.getElementsByClassName('editBtn'));
+
+  editer.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      $formEditState = true;
+      $index = $(this).data('contact');
+      $contacts = getLocalStorage();
+      $contact = $contacts[$index];
+
+      $('#firstname').val($contact.firstname);
+      $('#lastname').val($contact.lastname);
+      $('#adress').val($contact.adress);
+      $('#codepostal').val($contact.codepostal);
+      $('#number').val($contact.number);
+      $('#email').val($contact.email);
+      $form.attr('data-contact', $index);
+    });
+  });
+}
+
+function persistEditContact($contact) {
+      $contacts = getLocalStorage();
+      $index = $form.attr('data-contact');
+      let btns = Array.from($('.editBtn'));
+      $contacts[$index] = $contact;
+
+      localStorage.setItem('contact', JSON.stringify($contacts));
+
+      btns.forEach(function(btn) {
+        if($index == $(btn).attr('data-contact')) {
+          $(btn).parent().parent().remove();
+        }
+      });
+
+      $formEditState = false;
+      showHtml($contact, $index);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
+  $formEditState = false;
 
   if(getContacts()) {
     $contacts = getContacts();
@@ -98,6 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
     showUl($contact, index);
   });
 
- deleteContact();
-
+  deleteContact();
+  editerContact();
 });
