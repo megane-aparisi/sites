@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /*62.5% de 16 ca fait 10px ; 1rem=10px*/
+}
+
+#response{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

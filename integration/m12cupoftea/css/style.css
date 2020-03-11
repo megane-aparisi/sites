@@ -373,6 +373,7 @@ padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  color: #666666;
 }
 
 .all_sections{
@@ -387,10 +388,41 @@ padding-top: 1.5rem;
     width: 40%;
     margin: auto;
     text-align: left;
+    float: left;
+  }
+
+  .leftItems h2{
+    font-size: 20px;
+    color: #666666;
+    font-weight: normal;
   }
   .rightItems{
     width: 40%;
     margin: auto;
+    text-align: right;
+  }
+
+  .rightItems p{
+    color: #879e0f;
+  }
+
+  .text p:nth-child(n+3){
+    font-weight: bold;
+  }
+
+  .item_achat{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    float: right;
+  }
+
+  .item_achat label{
+    text-align: left;
+  }
+
+  .clearfix {
+    clear: both;
   }
 }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>AJAX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <body>
+    <main>
+      <form id="mon_form">
+              <fieldset>
+                <legend>AJAX</legend>
+                <div class="form_ans">
+                  <p>
+                  <label for="firstname">Votre prénom</label>
+                  <input type="text" id="prenom" name="prenom" required="required">
+                  </p>
+                  <p>
+                  <label for="lastname">Votre nom</label>
+                  <input type="text" id="nom" name="nom" required="required">
+                  </p>
+                </div>
+              </fieldset>
+              <button class="send_btn" type="submit" name="button">Envoyer</button>
+          </form>
+          <div id="response">
+
+          </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

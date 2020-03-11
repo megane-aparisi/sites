@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>EXERCICE AJAX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet" >
+</head>
+  <body>
+    <main>
+      <h1>Exercice AJAX</h1>
+      <div id="response">
+
+      </div>
+      <form>
+              <fieldset>
+                <legend>Votre choix</legend>
+                <div class="form_ans">
+                  <p>
+                  <label for="htmlContent">Récupérer un contenu HTML du serveur</label>
+                  <input type="radio" name="choice" value="htmlContent">
+                  </p>
+                  <p>
+                  <label for="jsonContent">Récupérer un contenu JSON du serveur</label>
+                  <input type="radio" name="choice" value="jsonContent">
+                  </p>
+                  <p>
+                  <label for="movieContent">Récupérer les films</label>
+                  <input type="radio" name="choice" value="movieContent">
+                  </p>
+                </div>
+              </fieldset>
+                <button class="send_btn" type="submit">Exécuter</button>
+          </form>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
