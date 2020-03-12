@@ -1,22 +1,89 @@
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
+let canvas = document.getElementById('canvas');
+let context = canvas.getContext('2d');
+let deleteBtn = document.getElementById('clear_btn');
+let allColorsBtns = Array.from(document.getElementsByClassName('jsColor'));
+let color = 'black';
+let weightBtns = Array.from(document.getElementsByClassName('jsWeight'));
+let weight = '2';
 
 canvas.width = 800;
 canvas.height = 600;
 
-canvas.addEventListener('click', function(e){
-  let position = positionObj.getMousePos(canvas, e);
-  let circleSize = dessinObj.getRandomNumber(45, 1);
-  const colorRef ={
-    r: dessinObj.getRandomNumber(255, 0),
-    g: dessinObj.getRandomNumber(255, 0),
-    b: dessinObj.getRandomNumber(255, 0),
-  };
+
+let isDrawing = false;
+let posY = 0;
+let posX = 0;
+
+deleteBtn.addEventListener('click', function(e) {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+
+
+
+
+function drawCircle(e) {
 
   context.beginPath();
-  context.arc(position.x, position.y, circleSize, 0,  Math.PI*2);
-  // context.moveTo(e.x, e.y);
-  context.fillStyle = `rgba(${colorRef.r}, ${colorRef.g}, ${colorRef.b},1)`;
-  context.fill();
+  context.moveTo(e.offsetX, e.offsetY);
+  context.lineTo(posX, posY);
+  context.strokeStyle = color;
+  context.lineWidth = weight;
+  context.lineJoin = 'round';
+  context.lineCap = 'round';
   context.stroke();
+  posX = e.offsetX;
+  posY = e.offsetY;
+
+}
+
+
+canvas.addEventListener('mousedown', function(e){
+  isDrawing = true;
+  posX = e.offsetX;
+  posY = e.offsetY;
 });
+
+canvas.addEventListener('mousemove', function(e){
+  if(isDrawing){
+    drawCircle(e);
+  }
+});
+
+canvas.addEventListener('mouseup', function(e){
+  isDrawing = false;
+});
+
+canvas.addEventListener('mouseleave', function(e){
+  isDrawing = false;
+});
+
+/*COULEURS*/
+
+document.addEventListener('DOMContentLoaded', function() {
+  uniqueColor();
+  uniqueWeight();
+});
+
+function uniqueColor() {
+  allColorsBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        color = this.getAttribute('data-color');
+    })
+  });
+}
+
+let multiColor = document.getElementById('multi');
+multiColor.addEventListener('change', function() {
+  color = multiColor.value;
+});
+
+/*EPAISSEUR*/
+
+function uniqueWeight() {
+  weightBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        weight = this.getAttribute('id');
+    })
+  });
+}

@@ -2,14 +2,38 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Masterpiece</title>
+    <title>Ardoise Magique</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
     <link href="style.css" rel="stylesheet" >
   </head>
   <body id="body">
     <main>
-    <canvas id="canvas"></canvas>
-    <div id="container">
 
+    <div class="fullcanvas">
+      <h1>Magic Wall</h1>
+      <canvas id="canvas"></canvas>
+      <div id="container">  </div>
+      <button id="clear_btn" type="reset">Effacer</button>
+    </div>
+    <div class="param">
+      <div class="colors">
+        <h2>Couleur</h2>
+        <button data-color="#ff00b6" id="purple" name"color" class="jsColor"></button>
+        <button data-color="#2eff00" id="green" name"color" class="jsColor"></button>
+        <button data-color="#e8ff00" id="yellow" name"color" class="jsColor"></button>
+        <button data-color="#001fff"id="blue" name"color" class="jsColor"></button>
+        <input type="color" id="multi" name="" value="">
+      </div>
+      <div class="weight">
+        <h2>Epaisseur</h2>
+        <button id="2" name"weight" class="jsWeight">S</button>
+        <button id="6" name"weight" class="jsWeight">M</button>
+        <button id="10" name"weight" class="jsWeight">L</button>
+      </div>
     </div>
   </main>
     <script src="position.js"></script>
