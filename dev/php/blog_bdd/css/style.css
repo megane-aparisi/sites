@@ -1,0 +1,392 @@
+/*
+Couleur rose : #fb8b9b;
+Couleur bleu/gris : #213e4e;
+
+*/
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /*62.5% de 16 ca fait 10px ; 1rem=10px*/
+}
+
+body{
+  font-family: arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a{
+  text-decoration: none;
+  color: #213e4e;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+figure {
+  margin: 0;
+}
+
+h1, h2{
+  font-family: 'Candal', sans-serif;
+}
+
+h2{
+  margin-top: 5rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-top: dashed 0.5px #213e4e;
+  border-right: dashed 0.5px #213e4e;
+  border-left: dashed 0.5px #213e4e;
+
+  color: #213e4e;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  color: #213e4e;
+}
+
+
+
+main p{
+  font-family: 'Open Sans', sans-serif;
+  color: #213e4e;
+}
+
+/**************************************************************************************
+BANNIERE
+***************************************************************************************/
+@media screen and (max-width : 1023px){
+  .burger{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    outline: none;
+    font-size: 2rem;
+  }
+
+  #open {
+    z-index: 10;
+  }
+
+  #close:target {
+    color: #fb8b9b;
+    z-index: 20;
+  }
+
+  #navigation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+
+    transform: translateY(-100%);
+    height: 0;
+    opacity: 0;
+    will-change: transform;
+    transition: transform 1s linear;
+
+  }
+
+  #close:target + #navigation{
+   top: 120px;
+   transform: translateY(0);
+   height: auto;
+   opacity: 1;
+  }
+}
+
+
+.banner{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+
+.img_logo{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.bg-banner-home{
+  width: 100%;
+  background-image: url(../img/background.jpg);
+  min-height: 80vh;
+  background-size: cover;
+  text-align: center;
+  padding: 20rem 2rem;
+
+}
+
+.bg-banner-home h1, p{
+  color: white;
+
+}
+
+nav .fas{
+  display: block;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+}
+
+nav i{
+  color: #fb8b9b;
+}
+
+nav a{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav_active{
+ color: #fb8b9b;
+}
+
+.nav_active i{
+  color: #213e4e;
+}
+
+
+form{
+  width: 100%;
+  background-color: #fb8b9b;
+}
+
+input{
+  border: none;
+  background-color: #fb8b9b;
+  color: white;
+}
+
+@media screen and (min-width : 1024px) {
+
+  .burger{
+    display: none;
+  }
+
+
+  .banner{
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+  }
+
+  .img_logo{
+    margin-left: 10rem;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: row;
+    padding-right: 10rem;
+  }
+
+  header nav a:nth-child(-n+3){
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
+  header nav a:nth-child(4){
+    padding-left: 10rem;
+  }
+
+  header form p{
+    text-align: left;
+    margin-left:10rem;
+  }
+}
+/**************************************************************************************
+MAIN
+***************************************************************************************/
+main{
+  max-width: 80%;
+  margin: auto;
+}
+
+
+
+article{
+  border: dashed 0.5px #213e4e;
+  margin-bottom: 5rem;
+}
+
+
+/**************************************************list articles travaillé****************/
+.list_articles{
+  margin-top: 5rem;
+}
+
+.list_articles h3{
+  background-color: #213e4e;
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.list_articles li{
+  font-weight: lighter;
+  list-style: circle;
+  color: grey;
+}
+
+.list_articles .first-p{
+  text-align: center;
+  font-size: 1.4rem;
+  color: grey;
+}
+
+.list_articles .last-p{
+  text-align: center;
+  font-weight: bold;
+  color: grey;
+}
+
+.button{
+  display: block;
+  background-color: #fb8b9b;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (min-width : 1024px){
+  .list_articles{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.list_articles article{
+  flex-basis: 30%;
+  }
+}
+/*********************************list_articles_basic***************************/
+.list_articles_basic{
+  margin-top: 5rem;
+}
+
+.list_articles_basic article{
+    border: none;
+}
+
+.list_articles_basic h3{
+  text-align: center;
+  color: #fb8b9b;
+}
+
+.list_articles_basic .price{
+  text-align: center;
+  color: #fb8b9b;
+}
+
+.list_articles_basic p{
+  text-align: justify;
+  color: grey;
+}
+
+.list_articles_basic .fas{
+  display: block;
+  text-align: center;
+  font-size: 5rem;
+}
+
+@media screen and (min-width : 1024px){
+  .list_articles_basic{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list_articles_basic article{
+    flex-basis: 30%;
+  }
+}
+
+/*********************************list_articles_contact***************************/
+.list_articles_contact p{
+  text-align: center;
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.list_articles_contact .fas{
+  border-bottom: dashed 0.9px;
+  padding-bottom: 2rem;
+}
+
+iframe {
+  width: 100%;
+}
+
+/**************************************************************************************
+FOOTER
+***************************************************************************************/
+footer{
+  text-align: center;
+  background-color: #213e4e;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.footer_nav{
+  margin-bottom: 2rem;
+}
+.footer_nav a {
+  color: white;
+  font-weight: bold;
+
+}
+
+footer p{
+  color: white;
+  width: 80%;
+  margin: auto;
+}
+@media screen and (min-width : 1024px){
+  .footer_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer_nav a{
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+/**************************************************************************************
+MEDIA QUERY
+***************************************************************************************/
+@media screen and (min-width : 1024px) {
+
+}
+
+@media screen and (max-width : 1023px) {
+
+}
+
+@media screen and (min-width : 768px) {
+
+}
+
+@media screen and (max-width : 767px) {
+
+}

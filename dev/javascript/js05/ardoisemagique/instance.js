@@ -1,2 +1,2 @@
-// let dessinObj = new Dessin();
-// let positionObj = new Position();
+let dessinObj = new Dessin();
+let editObj = new Edit();

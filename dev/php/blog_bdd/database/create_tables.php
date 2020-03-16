@@ -43,3 +43,7 @@ $create_table_comments = '
 $create_user = '
   INSERT INTO users (name_author, email_author, is_the_boss ) VALUES (\'admin\', \'megane.aparisi@gmail.com\' , TRUE);
 ';
+
+$create_user_password = '
+  ALTER TABLE users ADD password CHAR(255) NOT NULL;
+';
